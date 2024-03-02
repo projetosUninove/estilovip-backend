@@ -4,8 +4,8 @@ import br.com.unimil.estilovip.enumerated.TipoUsuario;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "tb_user")
-public class User {
+@Table(name = "tb_usuario")
+public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
