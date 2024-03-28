@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class ProdutoService {
 
-    private ProdutoRepository repository;
+    private final ProdutoRepository repository;
 
     @Autowired
     public ProdutoService(ProdutoRepository repository) {
