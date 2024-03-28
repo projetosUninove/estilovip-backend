@@ -29,7 +29,7 @@ public class ProdutoController {
 
     @GetMapping("/{id}")
     public ResponseEntity<Produto> buscarPorId(@PathVariable Long id) {
-        return ResponseEntity.ok().body(service.buscar(id));
+        return ResponseEntity.ok().body(service.buscarPorId(id));
     }
 
     @PostMapping

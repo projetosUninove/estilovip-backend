@@ -22,8 +22,8 @@ public class ProdutoService {
         return repository.findAll(page);
     }
 
-    public Produto buscar(Long id) {
-        return this.buscarPorId(id);
+    public Produto buscarPorId(Long id) {
+        return this.findById(id);
     }
 
     public Produto criar(Produto produto) {
@@ -31,11 +31,11 @@ public class ProdutoService {
     }
 
     public void deletar(Long id){
-        Produto produto = buscarPorId(id);
+        Produto produto = findById(id);
         repository.delete(produto);
     }
 
-    private Produto buscarPorId(Long id) {
+    public Produto findById(Long id) {
         return repository.findById(id).orElseThrow(ProdutoNaoEncontradoException::new);
     }
 
